@@ -24,7 +24,7 @@ const requestHandler = function (req, res) {
 	if(req.url==='/') {
 	fs.readFile('./main.js','utf8',(err,data)=>{
 	//	console.log(data,'**')
-			res.setHeader("Content-Type", "javascript/text");
+			res.setHeader("Content-Type", "text/javascript");
 			res.setHeader("Access-Control-Allow-Origin", "*");
 			res.setHeader("Access-Control-Allow-Credentials", "true");
 			res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
