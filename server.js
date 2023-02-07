@@ -23,7 +23,9 @@ const requestHandler = function (req, res) {
 		const o = JSON.parse(c)
 		if (o.data === 'weather') {
 			const f = fetch(
-				`https://api.openweathermap.org/data/2.5/weather?q=${o.city}&appid=a1d7b55bf627b6db7643916254c70535&units=metric`)
+				`https://api.openweathermap.org/data/2.5/weather?q=${o.city}&appid=a1d7b55bf627b6db7643916254c70535&units=metric`,{
+					headers: {'Access-Control-Allow-Origin':"*"}
+				})
 			return f.then(async a => {
 				data = await a.json()
 				return data
