@@ -41,6 +41,7 @@ const requestHandler = function (req, res) {
 		}
 	}).then(r =>{
 		console.log(data)
+		res.setHeader("Content-Type", "application/json");
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		res.setHeader("Access-Control-Allow-Credentials", "true");
 		res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
@@ -48,7 +49,6 @@ const requestHandler = function (req, res) {
 		res.write(JSON.stringify(data))
 		res.end()
 	})
-	//res.setHeader("Content-Type", "application/json");
 
 	// 	case "/books":
 	// 		res.writeHead(200);
