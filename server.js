@@ -2,9 +2,6 @@ import express from 'express'
 const app = express()
 const port = 3008
 
-// app.post('/', (req, res) => {
-// 	res.send('Hello')
-// })
 app.use(express.static('public'))
 //app.use('/static', express.static('public'))
 app.get('/', (req, res) => {
